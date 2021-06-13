@@ -13,8 +13,11 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { TurnoComponent } from './components/turno/turno.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegistracitaComponent } from './components/registracita/registracita.component'
+
+
 
 @NgModule({
   declarations: [

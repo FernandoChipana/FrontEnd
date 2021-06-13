@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NgbModal } from'@ng-bootstrap/ng-bootstrap'
 
 @Component({
   selector: 'app-turno',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TurnoComponent implements OnInit {
 
-  constructor() { }
+  constructor(public modal:NgbModal) { }
 
   ngOnInit(): void {
   }

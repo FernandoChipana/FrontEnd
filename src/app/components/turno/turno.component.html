@@ -1,8 +1,8 @@
-<ng-template #turno let-modal class="container" style="background: skyblue; width: 450px; padding-top: 10px; ">
+<ng-template #turno let-modal>
     <form>
-        <div class="logo" style="background: blue;">
+        <div class="logo" style="background-image:url(assets/img/soscli_net.jpg); background-position: center; ">
             <div class="modal-header">
-                <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+                <h4 class="modal-title" id="modal-basic-title"></h4>
                 <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
                   <span aria-hidden="true">&times;</span>
                 </button>
@@ -30,9 +30,9 @@
                 <label class="form-check-label" for="inlineRadio2">Tercer Turno</label>
             </div>
 
-            <div class="form-group col-md-4">
+            <div class="form-group col-md-5">
                 <label for="inputState">Consultorio</label>
-                <select id="inputState" class="form-control form-control-sm" name="consultorio">
+                <select id="inputState" class="form-select" name="consultorio">
                     <option selected>No Especifica</option>
                     <option>c1</option>
                     <option>c2</option>
@@ -52,9 +52,9 @@
                         min="00:00" value="00:00">
                 </div>
             </div>
-            <div class="form-group col-md-4">
-                <label for="inputState">Tiempo de Cita</label>
-                <select id="inputState" class="form-control form-control-sm" name="consultorio">
+            <div class="form-group col-md-5">
+                <label >Tiempo de Cita</label>
+                <select  class="form-select" name="consultorio">
                     <option selected>No Especifica</option>
                     <option>5</option>
                     <option>10</option>
@@ -63,31 +63,32 @@
             </div>
             <label> Días de Programcion</label><br>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="dprogramcion" id="inlineRadio1" value="option1">
+                <input class="form-check-input" type="checkbox" name="dprogramcion[]" id="inlineRadio1" value="option1">
                 <label class="form-check-label">Lunes</label>
+            
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="dprogramcion" id="inlineRadio2" value="option2">
+                <input class="form-check-input" type="checkbox" name="dprogramcion[]" id="inlineRadio2" value="option2">
                 <label class="form-check-label">Martes</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="dprogramcion" id="inlineRadio2" value="option2">
+                <input class="form-check-input" type="checkbox" name="dprogramcion[]" id="inlineRadio2" value="option2">
                 <label class="form-check-label">Miercoles</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="dprogramcion" id="inlineRadio2" value="option2">
+                <input class="form-check-input" type="checkbox" name="dprogramcion[]" id="inlineRadio2" value="option2">
                 <label class="form-check-label">Jueves</label>
             </div>
-            <div class="form-check form-check-inline ">
-                <input class="form-check-input" type="radio" name="dprogramcion" id="inlineRadio2" value="option2">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="dprogramcion[]" id="inlineRadio2" value="option2">
                 <label class="form-check-label">Viernes</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="dprogramcion" id="inlineRadio2" value="option2">
+                <input class="form-check-input" type="checkbox" name="dprogramcion[]" id="inlineRadio2" value="option2">
                 <label class="form-check-label">Sabado</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="dprogramcion" id="inlineRadio2" value="option2">
+                <input class="form-check-input" type="checkbox" name="dprogramcion[]" id="inlineRadio2" value="option2">
                 <label class="form-check-label">Domingo</label>
             </div>
 

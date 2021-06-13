@@ -1,0 +1,47 @@
+<app-menu></app-menu>
+<div class="container">
+    <h1>Registra Paciente</h1>
+
+    <form  >
+        <div class="panel-group" >
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Nombre</label>
+                        <div class="col-lg-5">
+                            <input class="form-control" name="nombres" placeholder="Ingrese el Nombre" type="text"
+                                maxlength="20" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label" for="id_reg_ape">Apellido P</label>
+                        <div class="col-lg-5">
+                            <input class="form-control" name="apaterno" placeholder="Ingrese el Apellido Paterno"
+                                type="text" maxlength="40" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label" for="id_reg_apem">Apellido M</label>
+                        <div class="col-lg-5">
+                            <input class="form-control" name="amaterno" placeholder="Ingrese el Apellido Materno"
+                                type="text" maxlength="10" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-lg-9 col-lg-offset-3">
+
+                            <button  class="btn btn-primary" onclick="location.href='listar'">REGISTRA</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </form>
+
+
+</div>
+<app-footer></app-footer>

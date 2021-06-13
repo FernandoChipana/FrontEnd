@@ -1,9 +1,9 @@
-<section class="container" style="background: skyblue; width: 450px; padding-top: 10px; ">
+<ng-template #turno let-modal class="container" style="background: skyblue; width: 450px; padding-top: 10px; ">
     <form>
         <div class="logo" style="background: blue;">
             <div class="modal-header">
                 <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
-                <button type="button" class="close" aria-label="Close">
+                <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
@@ -112,4 +112,5 @@
     </form>
 
     
-</section>
+</ng-template>
+<button type="button" class="fas fa-pencil-alt" (click)="modal.open(turno)"></button>

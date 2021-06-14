@@ -13,4 +13,9 @@ export class RegistracitaComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  openLg(content: any) {
+    
+ 
+    this.modal.open(content, { scrollable: true , size: 'lg'});
+  }
 }

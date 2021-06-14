@@ -1,117 +1,227 @@
-<ng-template #turno let-modal>
+<ng-template #registracita let-modal>
     <form>
-        <div class="logo" style="background-image:url(assets/img/soscli_net.jpg); background-position: center; ">
-            <div class="modal-header">
-                <h4 class="modal-title" id="modal-basic-title"></h4>
-                <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
+
+        <div class="modal-header"
+            style="background-image:url(assets/img/soscli_net.jpg); background-position: center; background-repeat: no-repeat; background-size: 100%;">
+            <h4 class="modal-title" id="modal-basic-title"></h4>
+            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
+                <span aria-hidden="true">&times;</span>
+            </button>
         </div>
+
         <div class="modal-body">
-            <div class="form-row">
-                <label class="col-3 control-label">Medico</label>
-                <div class="row-5">
-                    <input class="form-control form-control-sm " name="medico" type="text" />
+            <label>Datos de la cita</label>
+            <div class="row">
+                <div class="col">
+                    <label>Fecha:</label>
+                </div>
+                <div class="col">
+                    <input type="text" readonly class="form-control-plaintext form-control-sm" id="fechaCita"
+                        name="fechaCita" value="13/06/2021">
+                </div>
+                <div class="col"><label>Hora:</label></div>
+                <div class="col">
+                    <input type="text" readonly class="form-control-plaintext form-control-sm" id="horaCita"
+                        name="horaCita" value="15:00">
+                </div>
+                <div class="col"><label>N de atencion:</label></div>
+                <div class="col">
+                    <input type="text" readonly class="form-control-plaintext form-control-sm" id="numAtencion"
+                        name="numAtencion">
                 </div>
             </div>
 
-            <label> Seleccione Turno</label><br>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="turno" id="inlineRadio1" value="option1">
-                <label class="form-check-label" for="inlineRadio1">Primer Turno</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="turno" id="inlineRadio2" value="option2">
-                <label class="form-check-label" for="inlineRadio2">Segundo Turno</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="turno" id="inlineRadio2" value="option2">
-                <label class="form-check-label" for="inlineRadio2">Tercer Turno</label>
-            </div>
-
-            <div class="form-group col-md-5">
-                <label for="inputState">Consultorio</label>
-                <select id="inputState" class="form-select" name="consultorio">
-                    <option selected>No Especifica</option>
-                    <option>c1</option>
-                    <option>c2</option>
-                    <option>c3</option>
-                </select>
-            </div>
-
-            <div class="row ">
-                <div class="col-lg-5 ">
-                    <label for="hinicio">Hora inicio</label>
-                    <input type="time" id="hinicio" name="hinicio" class="form-control form-control-sm" step="1800"
-                        min="00:00" value="00:00">
+            <hr>
+            <label>Datos Paciente</label>
+            <div class="row" style="padding-bottom: 10px;">
+                <div class="col-2">
+                    <label>N Historia:</label>
                 </div>
-                <div class="col-lg-5">
-                    <label for="hfinal">Hora inicio</label>
-                    <input type="time" id="hfinal" name="hfinal" class="form-control form-control-sm" step="1800"
-                        min="00:00" value="00:00">
+                <div class="col-2">
+                    <input type="text" class="form-control  form-control-sm" id="nunHistoria" name="nunHistoria">
+                </div>
+
+                <div class="col">
+                    <input type="text" class="form-control form-control-sm " id="fechaCita">
                 </div>
             </div>
-            <div class="form-group col-md-5">
-                <label >Tiempo de Cita</label>
-                <select  class="form-select" name="consultorio">
-                    <option selected>No Especifica</option>
-                    <option>5</option>
-                    <option>10</option>
-                    <option>15</option>
-                </select>
-            </div>
-            <label> Días de Programcion</label><br>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="dprogramcion[]" id="inlineRadio1" value="option1">
-                <label class="form-check-label">Lunes</label>
-            
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="dprogramcion[]" id="inlineRadio2" value="option2">
-                <label class="form-check-label">Martes</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="dprogramcion[]" id="inlineRadio2" value="option2">
-                <label class="form-check-label">Miercoles</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="dprogramcion[]" id="inlineRadio2" value="option2">
-                <label class="form-check-label">Jueves</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="dprogramcion[]" id="inlineRadio2" value="option2">
-                <label class="form-check-label">Viernes</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="dprogramcion[]" id="inlineRadio2" value="option2">
-                <label class="form-check-label">Sabado</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" name="dprogramcion[]" id="inlineRadio2" value="option2">
-                <label class="form-check-label">Domingo</label>
-            </div>
-
-            <div>
-                <textarea class="form-control" rows="3" name="comentario" style="margin-top: 10px; margin-bottom: 10px;"
-                    placeholder="Comentarios.."></textarea>
-            </div>
-            <div class="form-group">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" name="estado">
-                    <label class="form-check-label">
-                        Estado
-                    </label>
-
+            <div class="row" style="padding-bottom: 10px;">
+                <div class="col-2">
+                    <label>N Celular:</label>
                 </div>
+                <div class="col-3">
+                    <input type="text" class="form-control form-control-sm" id="nunHistoria" name="nunHistoria">
+                </div>
+
+                <div class="col-5">
+                    <label>Genera Nro. Atencion Automatico?</label>
+                </div>
+                <div class="col">
+                    <input class="form-check-input" type="radio" name="dprogramcion[]" id="inlineRadio2">
+                    <label>Si</label>
+                </div>
+
+                <div class="col">
+                    <input class="form-check-input" type="radio" name="dprogramcion[]" id="inlineRadio2">
+                    <label>No</label>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <label>Observacion:</label>
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control form-control-sm" id="nunHistoria" name="nunHistoria">
+                </div>
+
+            </div>
+            <hr>
+            <label>Datos Administrativos</label>
+            <div class="row">
+                <div class="col-2">
+                    <label>Contratante:</label>
+                </div>
+                <div class="col-2">
+                    <input type="text" class="form-control form-control-sm" id="nunHistoria" name="nunHistoria">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control form-control-sm" id="nunHistoria" name="nunHistoria">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <label>Aseguradora:</label>
+                </div>
+                <div class="col-2">
+                    <input type="text" class="form-control form-control-sm" id="nunHistoria" name="nunHistoria">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control form-control-sm" id="nunHistoria" name="nunHistoria">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label>N Carnet:</label>
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control form-control-sm" id="nunHistoria" name="nunHistoria">
+                </div>
+                <div class="col-2">
+                    
+                </div>
+                <div class="col">
+                    <label>N Poliza:</label>
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control form-control-sm" id="nunHistoria" name="nunHistoria">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label>T/Afilacion:</label>
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control form-control-sm" id="nunHistoria" name="nunHistoria">
+                </div>
+                <div class="col-2">
+                    
+                </div>
+                <div class="col">
+                    <label>T/Autorizacion:</label>
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control form-control-sm" id="nunHistoria" name="nunHistoria">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label>N Autorizacion:</label>
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control form-control-sm" id="nunHistoria" name="nunHistoria">
+                </div>
+                <div class="col-2">
+                    
+                </div>
+                <div class="col">
+                    <label>N C/Garantia:</label>
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control form-control-sm" id="nunHistoria" name="nunHistoria">
+                </div>
+                
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-2">
+                    <label>Factor Farm:</label>
+                </div>
+                <div class="col-1" style="padding-right: 0px;">
+                    <input type="text" class="form-control form-control-sm" id="nunHistoria" name="nunHistoria">
+                </div>
+                <div class="col-2" style="padding-right: 0px; padding-left: 0px;">
+                    <input type="text" class="form-control form-control-sm" id="nunHistoria" name="nunHistoria">
+                </div>
+                <div class="col" style="padding-left: 0px;">
+                    <input type="text" class="form-control form-control-sm" id="nunHistoria" name="nunHistoria">
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <label>Factor Serv:</label>
+                </div>
+                <div class="col-1" style="padding-right: 0px;">
+                    <input type="text" class="form-control form-control-sm" id="nunHistoria" name="nunHistoria">
+                </div>
+                <div class="col-2" style="padding-right: 0px; padding-left: 0px;">
+                    <input type="text" class="form-control form-control-sm" id="nunHistoria" name="nunHistoria">
+                </div>
+                <div class="col" style="padding-left: 0px;">
+                    <input type="text" class="form-control form-control-sm" id="nunHistoria" name="nunHistoria">
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <label>Deducible:</label>
+                </div>
+                <div class="col-1" style="padding-right: 0px;">
+                    <input type="text" class="form-control form-control-sm" id="nunHistoria" name="nunHistoria">
+                </div>
+                <div class="col-1" style="padding-right: 0px; padding-left: 0px;">
+                    <input type="text" class="form-control form-control-sm" id="nunHistoria" name="nunHistoria">
+                </div>
+                <div class="col" style="padding-right: 0px; padding-left: 0px;">
+                    <label>Coaseguro: %</label>
+                </div>
+                <div class="col-1"  style="padding-right: 0px; padding-left: 0px;">
+                    <input type="text" class="form-control form-control-sm" id="nunHistoria" name="nunHistoria">
+                </div>
+                <div class="col" style="padding-right: 0px; padding-left: 0px;">
+                    <label>Coaseguro Farm: %</label>
+                </div>
+                <div class="col-1" style="padding-right: 0px; padding-left: 0px;">
+                    <input type="text" class="form-control form-control-sm" id="nunHistoria" name="nunHistoria">
+                </div>
+                <div class="col" style="padding-right: 0px; padding-left: 0px;">
+                    <label>Descuento Farm: %</label>
+                </div>
+                <div class="col-1" style=" padding-left: 0px;">
+                    <input type="text" class="form-control form-control-sm" id="nunHistoria" name="nunHistoria">
+                </div>
+
             </div>
         </div>
-        <div class="modal-footer">
+        
+        <div class="modal-footer ">
             <button type="submit" class="btn btn-primary" style="margin-left: 25%; margin-bottom: 10px">Aceptar</button>
-            <button type="reset" class="btn btn-danger" style="margin-left: 10%; margin-bottom: 10px;">Cancelar</button>
+            <button type="reset" class="btn btn-danger" style="margin-left: 10%; margin-bottom: 10px;"
+                (click)="modal.dismiss()">Cancelar</button>
         </div>
     </form>
 
-    
+
 </ng-template>
-<button type="button" class="fas fa-calendar-plus" (click)="modal.open(turno)"></button>
+<button type="button" class="fas fa-calendar-plus" (click)="openLg(registracita)"></button>

@@ -14,8 +14,10 @@ import { MenuComponent } from './components/menu/menu.component';
 import { TurnoComponent } from './components/turno/turno.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RegistracitaComponent } from './components/registracita/registracita.component'
+import { RegistracitaComponent } from './components/registracita/registracita.component';
+import { CitaComponent } from './components/cita/cita.component'
 
 
 
@@ -29,7 +31,8 @@ import { RegistracitaComponent } from './components/registracita/registracita.co
     FooterComponent,
     MenuComponent,
     TurnoComponent,
-    RegistracitaComponent
+    RegistracitaComponent,
+    CitaComponent
   ],
   imports: [
     BrowserModule,

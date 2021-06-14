@@ -1,4 +1,5 @@
 import { Routes, RouterModule } from'@angular/router';
+import { CitaComponent } from './components/cita/cita.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { ListarComponent } from './components/listar/listar.component';
 import { LoginComponent } from './components/login/login.component';
@@ -14,6 +15,7 @@ const app_routes: Routes =[
     {path:'login',component: LoginComponent},
     {path:'turno',component: TurnoComponent},
     {path:'registracita',component: RegistracitaComponent},
+    {path:'cita',component: CitaComponent},
     {path: '**', pathMatch:'full', redirectTo:'inicio'}
 ];
 

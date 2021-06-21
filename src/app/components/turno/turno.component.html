@@ -4,21 +4,21 @@
             <div class="modal-header">
                 <h4 class="modal-title" id="modal-basic-title"></h4>
                 <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
-                  <span aria-hidden="true">&times;</span>
+                    <span aria-hidden="true">&times;</span>
                 </button>
-              </div>
+            </div>
         </div>
         <div class="modal-body">
-            <div class="form-row">
-                <label class="col-3 control-label">Medico</label>
-                <div class="row-5">
-                    <input class="form-control form-control-sm " name="medico" type="text" />
+            <div class="row" style="padding-bottom: 10x;">
+                <label class="col-2">Medico:</label>
+                <div class="col">
+                    <input class="form-control form-control-sm " name="cmp" type="text" />
                 </div>
             </div>
-
+            <hr>
             <label> Seleccione Turno</label><br>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="turno" id="inlineRadio1" value="option1">
+                <input class="form-check-input" type="radio" name="turno" id="inlineRadio1" value="tur">
                 <label class="form-check-label" for="inlineRadio1">Primer Turno</label>
             </div>
             <div class="form-check form-check-inline">
@@ -30,42 +30,44 @@
                 <label class="form-check-label" for="inlineRadio2">Tercer Turno</label>
             </div>
 
-            <div class="form-group col-md-5">
-                <label for="inputState">Consultorio</label>
-                <select id="inputState" class="form-select" name="consultorio">
-                    <option selected>No Especifica</option>
-                    <option>c1</option>
-                    <option>c2</option>
-                    <option>c3</option>
-                </select>
+            <div class="row " style="padding-top: 10px;">
+                <label class="col-3">Consultorio</label>
+                <div class="col-5">
+                    <select class="form-select form-select-sm " name="consultorio">
+                        <option selected>No Especifica</option>
+                        <option>c1</option>
+                        <option>c2</option>
+                        <option>c3</option>
+                    </select>
+                </div>
             </div>
 
-            <div class="row ">
+            <div class="row " style="padding-top: 10px;">
                 <div class="col-lg-5 ">
                     <label for="hinicio">Hora inicio</label>
-                    <input type="time" id="hinicio" name="hinicio" class="form-control form-control-sm" step="1800"
-                        min="00:00" value="00:00">
+                    <input type="time" id="hinicio" name="hinicio" class="form-control form-control-sm" value="00:00">
                 </div>
                 <div class="col-lg-5">
                     <label for="hfinal">Hora inicio</label>
-                    <input type="time" id="hfinal" name="hfinal" class="form-control form-control-sm" step="1800"
-                        min="00:00" value="00:00">
+                    <input type="time" id="hfinal" name="hfinal" class="form-control form-control-sm" value="00:00">
                 </div>
             </div>
-            <div class="form-group col-md-5">
-                <label >Tiempo de Cita</label>
-                <select  class="form-select" name="consultorio">
-                    <option selected>No Especifica</option>
-                    <option>5</option>
-                    <option>10</option>
-                    <option>15</option>
-                </select>
+            <div class="row" style="padding-top: 15px;">
+                <label class="col-4">Tiempo de Cita</label>
+                <div class="col-4">
+                    <select class="form-select form-select-sm" name="consultorio">
+                        <option selected>No Especifica</option>
+                        <option>5</option>
+                        <option>10</option>
+                        <option>15</option>
+                    </select>
+                </div>
             </div>
             <label> Días de Programcion</label><br>
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="checkbox" name="dprogramcion[]" id="inlineRadio1" value="option1">
                 <label class="form-check-label">Lunes</label>
-            
+
             </div>
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="checkbox" name="dprogramcion[]" id="inlineRadio2" value="option2">
@@ -112,6 +114,6 @@
         </div>
     </form>
 
-    
+
 </ng-template>
 <button type="button" class="fas fa-pencil-alt" (click)="modal.open(turno)"></button>

@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class ApiService {
 
   myAppUrl = 'https://localhost:44339/';
-  myApiUrl = 'api/fmedicos';
+  myApiUrl = 'fmedicos';
   list: fmedicosI[] | undefined;
   constructor(private http: HttpClient) { }
 

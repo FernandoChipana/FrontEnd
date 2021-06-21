@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {ApiService} from "../../services/api/api.service";
 @Component({
   selector: 'app-listar',
   templateUrl: './listar.component.html',
@@ -8,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListarComponent implements OnInit {
 
-  constructor() { }
+  constructor(public fmedicosservice:ApiService) { }
 
   ngOnInit(): void {
+    
+    this.fmedicosservice.getAllMedicos();
   }
+
+
 
 }

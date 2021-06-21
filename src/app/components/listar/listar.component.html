@@ -6,45 +6,38 @@
                 <thead>
                     <tr>
 
-                        <th>Nombres</th>
-                        <th>Especialidad</th>
-                        <th>Consultorio </th>
-                        <th>Turno </th>
-                        <th>Editar </th>
+                        <th>CMP</th>
+                        <th>Nombre</th>
+                        <th>Servicio </th>
+                        <th>NESP </th>
+                        <th>DNI </th>
+                        <th>Fecha de Nacimiento</th>
+                        <th>Celular</th>
+                        <th>Email </th>
+                        <th>Nombres </th>
+                        <th>especualidad </th>
+                        
                     </tr>
-                    <tr>
+                    <tr *ngFor="let fmedicos of fmedicosservice.list">
 
-                        <th></th>
-                        <th></th>
-                        <th> </th>
-                        <th> </th>     <th><app-turno></app-turno> </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!--   
-                            <c:forEach items="${sessionScope.autores}" var="x">
-                                <tr>
-                                    <td>idAutor}</td>
-                                    <td>nombres}</td>
-                                    <td>apaterno}</td>
-                                    <td>amaterno}</td>
-                                    <td>pais.nombre}</td>
-                                    <td>				
-                                        <button type='button'  class='btn btn-success' >
-                                            
-                                        </button>
-                                    </td>
-                                    <td>
-                                        <button type='button'  class='btn btn-success'>
-                                            
-                                        </button>
-                                    </td>
-                                </tr>
-                            </c:forEach>-->
-                    </tbody>
-                    </table>	
-            </div>	
+                        <th> {{fmedicos.cmp}}</th>
+                        <th> {{fmedicos.nomb}}</th>
+                        <th> {{fmedicos.serv}}</th>
+                        <th> {{fmedicos.nesp}}</th>
+                        <th> {{fmedicos.dni}}</th>
+                        <th> {{fmedicos.fecnac}}</th>
+                        <th> {{fmedicos.celu}} </th>
+                        <th> {{fmedicos.nombres}} </th>
+                        <th> {{fmedicos.especialidad}} </th>
+                        <th>
+                            <app-turno></app-turno>
+                        </th>
+                    </tr>
+                </thead>
+                
+            </table>
+        </div>
     </div>
-    
+
 </div>
 <app-footer></app-footer>

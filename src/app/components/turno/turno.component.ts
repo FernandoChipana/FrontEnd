@@ -41,5 +41,6 @@ export class TurnoComponent implements OnInit {
   postForm(form:turnosI) { 
 
     this.turnoApi.postTurnos(form).subscribe();
+    console.log(form);
   }
 }

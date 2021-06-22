@@ -4,11 +4,11 @@ export interface turnosI {
 
     id: string;
     turcod: string;
-    codcon: number;
+    codcon: string;
     nesp: string;
     turini: Date;
     turfin: Date;
-    turtime: number;
+    turtime: string;
     lun: string;
     mar: string;
     mie: string;

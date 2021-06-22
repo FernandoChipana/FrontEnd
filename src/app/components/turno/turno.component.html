@@ -35,9 +35,9 @@
                 <div class="col-5">
                     <select class="form-select form-select-sm " formControlName="codcon">
                        
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
                     </select>
                 </div>
             </div>
@@ -45,11 +45,11 @@
             <div class="row " style="padding-top: 10px;">
                 <div class="col-lg-5 ">
                     <label for="hinicio">Hora inicio</label>
-                    <input type="time" id="hinicio" formControlName="turini" class="form-control form-control-sm" value="00:00">
+                    <input type="datetime-local" id="hinicio" formControlName="turini" class="form-control form-control-sm">
                 </div>
                 <div class="col-lg-5">
                     <label for="hfinal">Hora inicio</label>
-                    <input type="time" id="hfinal" formControlName="turfin" class="form-control form-control-sm" value="00:00">
+                    <input type="datetime-local" id="hfinal" formControlName="turfin" class="form-control form-control-sm" >
                 </div>
             </div>
             <div class="row" style="padding-top: 15px;">
@@ -57,9 +57,9 @@
                 <div class="col-4">
                     <select class="form-select form-select-sm" formControlName="turtime">
                         
-                        <option>5</option>
-                        <option>10</option>
-                        <option>15</option>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
                     </select>
                 </div>
             </div>

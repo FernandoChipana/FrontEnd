@@ -20,7 +20,8 @@ import{HttpClientModule} from '@angular/common/http';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-
+import { FormGroup,FormControl,Validators} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -34,14 +35,17 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     MenuComponent,
     TurnoComponent,
     RegistracitaComponent,
-    CitaComponent
+    CitaComponent,
+    
   ],
   imports: [
     BrowserModule,
     app_routing,
     NgbModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
 
   ],
   providers: [],

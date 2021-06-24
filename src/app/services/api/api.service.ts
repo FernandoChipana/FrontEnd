@@ -3,6 +3,7 @@ import { fmedicosI } from '../../models/fmedicos.interface';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { turnosI } from 'src/app/models/turnos.interface';
+import { fmclinicI } from 'src/app/models/fmclinic.interface';
 @Injectable({
   providedIn: 'root'
 })
@@ -20,6 +21,11 @@ export class ApiService {
   }
   postTurnos(form:turnosI){
     let direccion =this.myAppUrl+'turnos'
+    return this.http.post(direccion,form);
+  }
+  
+  postPacientes(form:fmclinicI){
+    let direccion =this.myAppUrl+'clientes'
     return this.http.post(direccion,form);
   }
 

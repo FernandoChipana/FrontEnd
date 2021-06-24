@@ -24,6 +24,8 @@ import { FormGroup,FormControl,Validators} from '@angular/forms';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +37,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MenuComponent,
     TurnoComponent,
     RegistracitaComponent,
-    CitaComponent,
+    CitaComponent
+    
     
   ],
   imports: [

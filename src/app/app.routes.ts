@@ -8,6 +8,7 @@ import { RegistroComponent } from './components/registro/registro.component';
 import { TurnoComponent } from './components/turno/turno.component';
 
 
+
 const app_routes: Routes =[
     {path:'registro',component: RegistroComponent},
     {path:'listar',component: ListarComponent},
@@ -16,6 +17,7 @@ const app_routes: Routes =[
     {path:'turno',component: TurnoComponent},
     {path:'registracita',component: RegistracitaComponent},
     {path:'cita',component: CitaComponent},
+    
     {path: '**', pathMatch:'full', redirectTo:'inicio'}
 ];
 

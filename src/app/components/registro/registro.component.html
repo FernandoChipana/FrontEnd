@@ -1,47 +1,105 @@
 <app-menu></app-menu>
-<div class="container">
-    <h1>Registra Paciente</h1>
-
-    <form  >
-        
-
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <div class="form-group">
-                        <label class="col-lg-3 control-label">Nombres</label>
-                        <div class="col-lg-5">
-                            <input class="form-control" name="nombres" placeholder="Ingrese el Nombre" type="text"
-                                maxlength="20" />
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-lg-3 control-label" for="id_reg_ape">Apellido P</label>
-                        <div class="col-lg-5">
-                            <input class="form-control" name="apaterno" placeholder="Ingrese el Apellido Paterno"
-                                type="text" maxlength="40" />
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-lg-3 control-label" for="id_reg_apem">Apellido M</label>
-                        <div class="col-lg-5">
-                            <input class="form-control" name="amaterno" placeholder="Ingrese el Apellido Materno"
-                                type="text" maxlength="10" />
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="col-lg-9 col-lg-offset-3">
-
-                            <button  class="btn btn-primary" onclick="location.href='listar'">REGISTRA</button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-       
-    </form>
-
+<div class="modal-header"
+    style="background-image:url(assets/img/soscli_net.jpg); background-repeat: no-repeat;  height: 80px;">
 
 </div>
+<div class="container" style="width: 600px;">
+
+    <h2>Registra Paciente</h2>
+
+    <form [formGroup] = "nuevoFormClientes" (ngSubmit)="postForm(nuevoFormClientes.value)">
+
+
+        <div class="form-group" style="padding-top: 10px;">
+            <label class="col-sm-2 col-form-label" style="padding-left: 30px;">Nombres</label>
+            <div class="col-lg-11 " style="padding-left: 25px;">
+                <input class="form-control form-control-md" formControlName="nomb" placeholder="Ingrese nombres completos"
+                    type="text" />
+            </div>
+        </div>
+        <div class="form-row">
+            <label class="col-md-6 mb-2" style="padding-left: 35px;">Tipo de Documento</label>
+            <div class="col-md-5 mb-2">
+                <select class="form-select form-select-md" formControlName="tipdoc">
+
+                    <option value="1">DNI</option>
+                    <option value="2">Pasaporte</option>
+                    <option value="3">Carnet de Extranjeria</option>
+                    <option value="4">Otro</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-row" style="padding-left: 30px;">
+            <label class="col-md-6 mb-2 ">N° de Documento:</label>
+            <div class="col-md-5 mb-2">
+                <input class="form-control" formControlName="ndoc" placeholder="Ingrese el DNI" type="text" maxlength="8" />
+            </div>
+        </div>
+
+        <div class="form-row" style="padding-left: 30px;">
+            <label class="col-md-5 mb-2 ">Fecha de Nacimiento:</label>
+            <div class="form-group">
+                <div class=" col-md-10 mb-2 input-group" style="padding-left: 45px;">
+                    <input   type="date" style="width: 260px; height: 35px; border-color: rgb(183, 187, 190);"  formControlName="fechnac">
+                    
+                </div>
+            </div>
+
+        </div>
+        <div class="form-row">
+            <label class="col-md-6 mb-2" style="padding-left: 35px;">Sexo:</label>
+            <div class="col-md-5 mb-2">
+                <select class="form-select form-select-md" formControlName="sexo">
+
+                    <option value="1">Masculino</option>
+                    <option value="2">Femenino</option>
+
+                </select>
+            </div>
+        </div>
+        <div class="form-row">
+            <label class="col-sm-3 col-form-label" style="padding-left: 35px;">Email</label>
+            <div class="col-sm-8" style="padding-left: 30px;">
+                <input type="email" class="form-control" formControlName="email" placeholder="Email">
+            </div>
+        </div>
+        
+        <div class="form-row" style="padding-left: 30px; padding-top: 15px;">
+            <label class="col-md-6 mb-2 ">Celular:</label>
+            <div class="col-md-5 mb-2">
+                <input class="form-control" formControlName="cel" placeholder="Ingrese su Celular" type="text" maxlength="9" />
+            </div>
+        </div>
+
+        <div class="form-group" style="padding-bottom: 10px; padding-top: 10px;">
+            <div class="col-lg-9 " style="padding-left: 40%;">
+
+                <button class="btn btn-primary" type="submit" >REGISTRA</button>
+            </div>
+        </div>
+
+
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
 <app-footer></app-footer>
+<style>
+    button.calendar,
+    button.calendar:active {
+        width: 50px;
+        height: 38px;
+
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAcCAYAAAAEN20fAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEUSURBVEiJ7ZQxToVAEIY/YCHGxN6XGOIpnpaEsBSeQC9ArZbm9TZ6ADyBNzAhQGGl8Riv4BLAWAgmkpBYkH1b8FWT2WK/zJ8ZJ4qiI6XUI3ANnGKWBnht2/ZBDRK3hgVGNsCd7/ui+JkEIrKtqurLpEWaphd933+IyI3LEIdpCYCiKD6HcuOa/nwOa0ScJEnk0BJg0UTUWJRl6RxCYEzEmomsIlPU3IPW+grIAbquy+q6fluy/28RIBeRMwDXdXMgXLj/B2uimRXpui4D9sBeRLKl+1N+L+t6RwbWrZliTTTr1oxYtzVWiTQAcRxvTX+eJMnlUDaO1vpZRO5NS0x48sIwfPc87xg4B04MCzQi8hIEwe4bl1DnFMCN2zsAAAAASUVORK5CYII=') !important;
+        background-repeat: no-repeat;
+        background-size: 23px;
+        background-position: center;
+    }
+</style>

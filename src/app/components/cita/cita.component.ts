@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ApiService } from "../../services/api/api.service";
 import { NgbCalendar} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -11,9 +11,12 @@ export class CitaComponent implements OnInit {
 
   
 
-  constructor(public calendar: NgbCalendar) { }
+  constructor(public calendar: NgbCalendar ,public citaApi:ApiService) { }
 
   ngOnInit(): void {
+
+    this.citaApi.getAllEspecialidad();
+    this.citaApi.getAllMedicos();
   }
 
   

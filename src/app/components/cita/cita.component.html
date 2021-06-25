@@ -6,18 +6,14 @@
 <section style="width: 20%; height: 100%;  float: left;">
     <form style="margin: 10px;">
         <label>Especialidad</label>
-        <select  class="form-select" name="consultorio">
-            <option selected>No Especifica</option>
-            <option>5</option>
-            <option>10</option>
-            <option>15</option>
+        <select  class="form-select" formControlName="especialidad">
+            <option [value]="especialidad.id" *ngFor="let especialidad of citaApi.listEspecialidad">{{especialidad.nombre}}</option>
+            
         </select>
         <label>Medico</label>
-        <select  class="form-select" name="consultorio">
-            <option selected>No Especifica</option>
-            <option>5</option>
-            <option>10</option>
-            <option>15</option>
+        <select  class="form-select" formControlName="medicos">
+            <option [value]="medicos.cmp" *ngFor="let medicos of citaApi.list">{{medicos.nomb}}</option>
+            
         </select>
         <ngb-datepicker #dp style="margin-left: 60px; margin-top: 10px;"></ngb-datepicker>
         

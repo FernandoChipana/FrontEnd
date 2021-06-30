@@ -8,6 +8,5 @@ export interface fmedicosI {
     fecnac: Date;
     celu: string;
     email: string;
-    nombres: string;
-    especialidad: string;
+  
 }

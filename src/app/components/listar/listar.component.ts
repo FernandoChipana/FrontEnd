@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ApiService} from "../../services/api/api.service";
+import { turnosI, turnosIv } from 'src/app/models/turnos.interface';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-listar',
   templateUrl: './listar.component.html',
@@ -8,13 +10,21 @@ import {ApiService} from "../../services/api/api.service";
 })
 export class ListarComponent implements OnInit {
 
-  constructor(public fmedicosservice:ApiService) { }
+  constructor(public fturnosv:ApiService, private router:Router) { }
+
+  public dias:string;
 
   ngOnInit(): void {
     
-    this.fmedicosservice.getAllMedicos();
+    
+
+    this.fturnosv.gettAllTurnos();
+   
+ 
   }
 
-
+  editarTurno(cmp: string){
+    this.router.navigate(['turno',cmp]);
+  }
 
 }

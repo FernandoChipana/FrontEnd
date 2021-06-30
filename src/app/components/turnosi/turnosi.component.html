@@ -1,0 +1,77 @@
+<div class="row " style="padding-top: 10px;">
+    <label class="col-3">Consultorio</label>
+    <div class="col-5">
+        <select class="form-select form-select-sm " formControlName="codcon">
+
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+    </div>
+</div>
+
+<div class="row " style="padding-top: 10px;">
+    <div class="col-lg-5 ">
+        <label for="hinicio">Hora inicio</label>
+        <input type="datetime-local" id="hinicio" formControlName="turini" class="form-control form-control-sm">
+    </div>
+    <div class="col-lg-5">
+        <label for="hfinal">Hora inicio</label>
+        <input type="datetime-local" id="hfinal" formControlName="turfin" class="form-control form-control-sm">
+    </div>
+</div>
+<div class="row" style="padding-top: 15px;">
+    <label class="col-4">Tiempo de Cita</label>
+    <div class="col-4">
+        <select class="form-select form-select-sm" formControlName="turtime">
+
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+        </select>
+    </div>
+</div>
+<label> Días de Programcion</label><br>
+<div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" formControlName="lun" value="1">
+    <label class="form-check-label">Lunes</label>
+
+</div>
+<div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" formControlName="mar" id="inlineRadio2" value="1">
+    <label class="form-check-label">Martes</label>
+</div>
+<div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" formControlName="mie" id="inlineRadio2" value="1">
+    <label class="form-check-label">Miercoles</label>
+</div>
+<div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" formControlName="jue" id="inlineRadio2" value="1">
+    <label class="form-check-label">Jueves</label>
+</div>
+<div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" formControlName="vier" id="inlineRadio2" value="1">
+    <label class="form-check-label">Viernes</label>
+</div>
+<div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" formControlName="sab" id="inlineRadio2" value="1">
+    <label class="form-check-label">Sabado</label>
+</div>
+<div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" formControlName="dom" id="inlineRadio2" value="1">
+    <label class="form-check-label">Domingo</label>
+</div>
+
+<div>
+    <textarea class="form-control" rows="3" name="obs" style="margin-top: 10px; margin-bottom: 10px;"
+        placeholder="Comentarios.."></textarea>
+</div>
+<div class="form-group">
+    <div class="form-check">
+        <input class="form-check-input" type="radio" value="1" formControlName="estado">
+        <label class="form-check-label">
+            Estado
+        </label>
+
+    </div>
+</div>

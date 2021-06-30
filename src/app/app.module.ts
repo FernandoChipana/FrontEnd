@@ -22,6 +22,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { FormGroup,FormControl,Validators} from '@angular/forms';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TurnosiComponent } from './components/turnosi/turnosi.component';
 
 
 
@@ -37,7 +38,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MenuComponent,
     TurnoComponent,
     RegistracitaComponent,
-    CitaComponent
+    CitaComponent,
+    TurnosiComponent
     
     
   ],

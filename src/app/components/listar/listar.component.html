@@ -1,43 +1,72 @@
 <app-menu></app-menu>
+<br><br>
+<div class="container-fluid">
 <div class="row">
     <div class="col-md-12">
         <div class="content">
-            <table id="tablePaginacion" class="table table-striped table-bordered">
+            <table class="table table-sm table-hover ">
                 <thead>
-                    <tr>
+                    <tr class="table-primary">
 
-                        <th>CMP</th>
-                        <th>Nombre</th>
-                        <th>Servicio </th>
-                        <th>NESP </th>
-                        <th>DNI </th>
-                        <th>Fecha de Nacimiento</th>
-                        <th>Celular</th>
-                        <th>Email </th>
-                        <th>Nombres </th>
-                        <th>especualidad </th>
+                        <th rowspan="2">CMP</th>
+                        <th rowspan="2">Medico</th>
+                        <th rowspan="2">Servicio </th>
+                        <th rowspan="2">Consultorio </th>
+                        <th rowspan="2">Turno </th>
+                        <th rowspan="2">Inicio</th>
+                        <th rowspan="2">Fin</th>
+                        <th rowspan="2">Tiempo </th>
+                        <th colspan="7">Dias </th>
+                        <th rowspan="2">Observacion </th>
                         
                     </tr>
-                    <tr *ngFor="let fmedicos of fmedicosservice.list">
+                    <tr class="table-primary">
+                        <th style="width:5px">Lun</th>
+                        <th style="width:5px">Mar</th>
+                        <th style="width:5px">Mie</th>
+                        <th style="width:5px">Jue</th>
+                        <th style="width:5px">Vie</th>
+                        <th style="width:5px">Sab</th>
+                        <th style="width:5px">Dom</th>
 
-                        <th> {{fmedicos.cmp}}</th>
-                        <th> {{fmedicos.nomb}}</th>
-                        <th> {{fmedicos.serv}}</th>
-                        <th> {{fmedicos.nesp}}</th>
-                        <th> {{fmedicos.dni}}</th>
-                        <th> {{fmedicos.fecnac | date:'yyyy-MM-dd '}}</th>
-                        <th> {{fmedicos.celu}} </th>
-                        <th> {{fmedicos.nombres}} </th>
-                        <th> {{fmedicos.especialidad}} </th>
-                        <th>
-                            <app-turno></app-turno>
-                        </th>
                     </tr>
+                    <tr class="table-primary">
+                        
+
+                    </tr>
+                    
                 </thead>
-                
+                <tbody>
+                    <tr *ngFor="let fturnosv of fturnosv.listturnosv" (click)="editarTurno(fturnosv.cmp)">
+
+                        <th> {{fturnosv.cmp}}</th>
+                        <td> {{fturnosv.nombre}}</td>
+                        <td> {{fturnosv.serv}}</td>
+                        <td> {{fturnosv.codcon}}</td>
+                        <td> {{fturnosv.turcod}}</td>
+                        <td> {{fturnosv.turini | slice:10:15}}</td>
+                        <td> {{fturnosv.turfin | slice:10:15}}</td>
+
+                        <td> {{fturnosv.turtime}}</td>
+                        <td style="width:5px"> {{fturnosv.lun}} </td>
+                        <td style="width:5px">{{fturnosv.mar}}</td>
+                        <td style="width:5px">{{fturnosv.mie}}</td>
+                        <td style="width:5px">{{fturnosv.jue}}</td>
+                        <td style="width:5px">{{fturnosv.vier}}</td>
+                        <td style="width:5px">{{fturnosv.sab}}</td>
+                        <td style="width:5px">{{fturnosv.dom}}</td>
+
+                        <td> {{fturnosv.obs}} </td>
+
+                        
+                    </tr>
+
+                </tbody>
             </table>
         </div>
     </div>
 
 </div>
+</div>
+
 <app-footer></app-footer>
